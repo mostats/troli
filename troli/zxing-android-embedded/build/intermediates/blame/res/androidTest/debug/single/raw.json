@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/anilj/Downloads/zxing-android-embedded-master/zxing-android-embedded/build/intermediates/res/merged/androidTest/debug/raw/zxing_beep.ogg",
+        "source": "/Users/anilj/Downloads/zxing-android-embedded-master/zxing-android-embedded/build/intermediates/bundles/debug/res/raw/zxing_beep.ogg"
+    },
+    {
+        "merged": "/Users/anilj/Workspaces/troli/zxing-android-embedded/build/intermediates/res/merged/androidTest/debug/raw/zxing_beep.ogg",
+        "source": "/Users/anilj/Workspaces/troli/zxing-android-embedded/build/intermediates/bundles/debug/res/raw/zxing_beep.ogg"
+    }
+]
