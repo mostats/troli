@@ -35,8 +35,6 @@ public class GroceryController {
      */
     @RequestMapping(value = "/grocery/item", method = RequestMethod.POST)
     public ResponseEntity<String> upsertGroceryList(@RequestBody Grocery grocery) {
-	  	LOG.info("value = " + grocery.getCustomerId());
-	  	LOG.info("value = " + grocery.getDescription());
 	  	
 	  	// if account does not exist add it with new grocery, if exists add new grocery or increase quantity of existing one
 	  	int customerId = grocery.getCustomerId();
@@ -54,30 +52,6 @@ public class GroceryController {
 	  			customerGrocery.increaseQuantity();
 	  		}
 	  	}	  	
-	  	LOG.info("valute = " + accounts.get(274598).getGroceryList().get("54B345YYC1").getDescription());
-	  	LOG.info("valute = " + accounts.get(274598).getGroceryList().get("54B345YYC1").getCustomerId());
 	  	return new ResponseEntity<String>(HttpStatus.OK);
     }
-    
-//    public ResponseEntity<String> upsertGroceryList(@RequestBody Grocery grocery) {
-//	  	LOG.info("value = " + grocery.toString());
-//	  	
-//	  	// if account does not exist add it with new grocery, if exists add new grocery or increase quantity of existing one
-//	  	int customerId = grocery.getCustomerId();
-//	  	GroceryList customerGroceryList = accounts.get(customerId);
-//	  	Map<String, Grocery> list = new HashMap<String, Grocery>();
-//	  	if (customerGroceryList == null) {
-//	  		list.put(grocery.getBarcode(), grocery);
-//	  		accounts.put(customerId, new GroceryList(customerId, list));
-//	  	} else {
-//	  		list = customerGroceryList.getGroceryList();
-//	  		Grocery customerGrocery = list.get(grocery.getBarcode());
-//	  		if (customerGrocery == null) {
-//	  			list.put(grocery.getBarcode(), grocery);
-//	  		} else {
-//	  			customerGrocery.increaseQuantity();
-//	  		}
-//	  	}	  	
-//	  	return new ResponseEntity<String>(HttpStatus.OK);
-//    }
 }
